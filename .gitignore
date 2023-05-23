@@ -1,0 +1,9 @@
+# Supabase
+.branches
+.temp
+
+# Environment variables
+.env
+
+# Node
+node_modules

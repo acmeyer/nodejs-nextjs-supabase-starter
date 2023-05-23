@@ -1,0 +1,37 @@
+.btn {
+  @apply rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50;
+  @apply dark:bg-white/10  dark:text-white dark:ring-0 dark:shadow-none dark:ring-offset-0 dark:ring-transparent dark:hover:bg-white/20;
+}
+
+.btn.btn-lg {
+  @apply px-3.5 py-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+}
+
+.btn.btn-sm {
+  @apply rounded px-2 py-1 text-xs;
+}
+
+.btn:disabled {
+  @apply opacity-75 cursor-not-allowed;
+}
+
+.btn.btn-block {
+  @apply w-full;
+}
+
+.btn.btn-link {
+  @apply w-auto p-0 border-none shadow-none outline-none focus:outline-none focus:ring-0 focus:ring-offset-0;
+}
+
+.btn.btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline shadow-none focus-visible:outline-2 ring-0 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+  @apply dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:outline-indigo-500;
+}
+
+.btn.btn-soft {
+  @apply bg-indigo-50 text-indigo-600 hover:bg-indigo-100;
+}
+
+.btn.btn-danger {
+  @apply bg-red-600 text-white;
+}
