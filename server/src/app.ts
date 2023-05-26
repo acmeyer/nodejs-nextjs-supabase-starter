@@ -17,7 +17,7 @@ declare global {
 const app = express();
 
 // Middleware
-app.use(cors({ origin: true }));
+app.use(cors({ origin: true, credentials: true }));
 if (process.env.LOGGING_ENABLED) {
   app.use(loggingHandler);
 }

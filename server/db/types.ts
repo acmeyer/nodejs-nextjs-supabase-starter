@@ -16,11 +16,7 @@ export type JsonPrimitive = boolean | null | number | string;
 
 export type JsonValue = JsonArray | JsonObject | JsonPrimitive;
 
-export type MessageRoleEnum = "assistant" | "user";
-
 export type Numeric = ColumnType<string, string | number, string | number>;
-
-export type SourceTypeEnum = "file" | "url";
 
 export type Timestamp = ColumnType<Date, Date | string, Date | string>;
 

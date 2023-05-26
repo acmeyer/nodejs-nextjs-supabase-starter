@@ -1,14 +1,10 @@
 import { NextFunction, Request, Response } from 'express';
 import { ERROR_MESSAGE } from '../lib/constants';
-import { db } from '../../db/db';
+import { getUserById } from '../models/user';
 
 export const getCurrentUser = async (req: Request, res: Response, next: NextFunction) => {
   try {
-    const user = await db
-      .selectFrom('users')
-      .selectAll()
-      .where('id', '=', req.user.id)
-      .executeTakeFirst();
+    const user = await getUserById(req.user.id);
     if (!user) {
       const error = new Error(ERROR_MESSAGE.USER_NOT_FOUND);
       error.name = 'NotFoundError';
@@ -16,7 +12,7 @@ export const getCurrentUser = async (req: Request, res: Response, next: NextFunc
     }
     return res.status(200).json({
       success: true,
-      user,
+      user
     });
   } catch (error: any) {
     next(error);

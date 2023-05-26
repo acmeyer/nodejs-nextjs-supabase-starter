@@ -1,11 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { createClient } from '@supabase/supabase-js';
 import { ERROR_MESSAGE } from '../lib/constants';
-import assert from 'assert';
-
-assert(process.env.SUPABASE_URL, 'Missing env var: SUPABASE_URL');
-assert(process.env.SUPABASE_ANON_KEY, 'Missing env var: SUPABASE_ANON_KEY');
-const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_ANON_KEY);
+import { supabase } from '../lib/supabase';
 
 export const authHandler = async (req: Request, res: Response, next: NextFunction) => {
   try{
