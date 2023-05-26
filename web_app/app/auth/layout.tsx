@@ -26,7 +26,7 @@ export default async function AuthLayout({ children }: { children: React.ReactNo
         <Image
           className="mx-auto h-14 w-14"
           src="/logo.svg"
-          alt="Spock"
+          alt="Logo"
           width={60}
           height={60}
         />
